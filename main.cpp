@@ -2212,16 +2212,36 @@ void bangkutribunbesar2(){
         glPopMatrix();
     }
     }
-    //dudukan2
+    //dudukan3
     y = 0;
     for (double x=0; x>=-25; x-=2.5){
         glPushMatrix();
         glColor3f(1,0.5,0.5);
-        glTranslatef(-8,22.5+y,-80+x);
-        glScalef(137,2,1);
+        glTranslatef(-5,23.5+y,-80+x);
+        glScalef(132,2,1);
         glutSolidCube(1);
         glPopMatrix();
-        y+=2;
+        y+=1.5;
+    }
+    //tempatduduk3
+    y = -1.5;
+    for (z=0; z>=-25; z-=2.5){
+        y +=1.5;
+        for (double x=0; x>=-130; x-=2){
+        glPushMatrix();
+        glColor3f(0.0, 0.5, 1.0);
+        glTranslatef(-70-x,25.1+y,-80.3+z);
+        glScalef(1,1.5,0.3);
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0.0, 0.5, 1.0);
+        glTranslatef(-70-x,24.8+y,-80+z);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
     }
 }
 
