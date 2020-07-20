@@ -889,6 +889,7 @@ void ataptribun2(){
     glVertex3f(59, 57, -80);
     glVertex3f(61, 57, -100);
     glVertex3f(108, 57, -100);
+    glEnd();
 
     //Tiang Utama 1-BIRU
     glPushMatrix();
