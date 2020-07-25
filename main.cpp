@@ -1374,14 +1374,14 @@ void ataptribunbesar1(){
     //Tiang Utama 15-Biru
     glPushMatrix();
     glColor3f(0, 0, 205/255.f);
-    glTranslatef(58.45, 45, 112.5);
+    glTranslatef(58.45, 45, 113);
     glScalef(0.75, 25, 1);
     glutSolidCube(3);
     glPopMatrix();
     //Tiang Utama 16-Orange
     glPushMatrix();
     glColor3f(221/255.f, 52/255.f, 0);
-    glTranslatef(68.45, 45, 112.5);
+    glTranslatef(68.45, 45, 113);
     glScalef(0.75, 25, 1);
     glutSolidCube(3);
     glPopMatrix();
@@ -1537,28 +1537,45 @@ void tribunbesar1(){
 
     //tibun atas
     glBegin(GL_QUADS);
-    glColor3f(0.0, 0.5, 1.0);
-    glVertex3f(-54, 10+5, 89);
+    glColor3f(1.0, 1.0, 1.0);
+    glVertex3f(-54, 15+5, 89);
     glVertex3f(-54, 40, 110);
     glVertex3f(54, 40, 110);
-    glVertex3f(54, 10+5, 89);
+    glVertex3f(54, 15+5, 89);
+    glEnd();
+
+    //tribunsambung
+    glBegin(GL_QUADS);
+    glColor3f(0, 0.0, 0.0);
+    glVertex3f(98.5, 20, 49);
+    glVertex3f(54, 20, 89);
+    glVertex3f(54, 20, 85);
+    glVertex3f(90.5, 20, 49);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3f(0, 0.0, 0.0);
+    glVertex3f(98.5, 20, 49);
+    glVertex3f(54, 20, 89);
+    glVertex3f(54, 40, 110);
+    glVertex3f(130, 35, 49);
     glEnd();
 
     //tembok tribun 2
     glBegin(GL_QUADS);
     glColor3f(1.0, 0, 1.0);
-    glVertex3f(-54, 15, 89);
+    glVertex3f(-54, 20, 89);
     glVertex3f(-54, 0, 89);
     glVertex3f(54, 0, 89);
-    glVertex3f(54, 15, 89);
+    glVertex3f(54, 20, 89);
     glEnd();
 
     glBegin(GL_QUADS);
     glColor3f(0.0, 0.5, 1.0);
-    glVertex3f(-54, 10+5, 89);
-    glVertex3f(-54, 12, 85);
-    glVertex3f(54, 12, 85);
-    glVertex3f(54, 10+5, 89);
+    glVertex3f(-54, 15+5, 89);
+    glVertex3f(-54, 20, 85);
+    glVertex3f(54, 20, 85);
+    glVertex3f(54, 15+5, 89);
     glEnd();
 
     //tembok tribun 2
@@ -1573,7 +1590,7 @@ void tribunbesar1(){
     //pagar tribun
     glPushMatrix();
     glColor3f(0.0, 0.5, 1.0);
-    glTranslatef(0,13.6,85);
+    glTranslatef(0,21.5,85.5);
     glScalef(54,1.5,0.3);
     glutSolidCube(2);
     glPopMatrix();
@@ -1849,7 +1866,14 @@ void tribunbesar2(){
     glVertex3f(67,10,-84);
     glEnd();
 
-
+    //tembok
+    glBegin(GL_QUADS);
+    glColor3f(0.0, 0.5, 1.0);
+    glVertex3f(61, 20, -84);
+    glVertex3f(61, 0, -84);
+    glVertex3f(95, 0, -84);
+    glVertex3f(95, 20, -84);
+    glEnd();
 }
 
 void bangkucadangan1(){
@@ -3541,6 +3565,131 @@ void tiangbaru(){
 
 }
 
+void alas(){
+    glPushMatrix();
+    glColor3f(0.35, 0.35, 0.35);
+    glTranslatef(0, -6.1, 0);
+    glScalef(50, 0.5, 50);
+    glutSolidCube(25);
+    glPopMatrix();
+
+}
+
+void parkir(){
+    glPushMatrix();
+    glColor3f(119/255.f, 136/255.f, 153/255.f);
+    glTranslatef(250, 0, 10);
+    glScalef(50, 0.5, 40);
+    glutSolidCube(3);
+    glPopMatrix();
+    //GARIS 1
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glTranslatef(250, 2, -20);
+    glScalef(40, 0.5, 0.75);
+    glutSolidCube(3);
+    glPopMatrix();
+    //GARIS LAIN
+    for ( double x=0; x>=-100; x-=10){
+        glPushMatrix();
+        glColor3f(1, 1, 1);
+        glTranslatef(300+x, 2, -20);
+        glScalef(0.5, 0.5, 15);
+        glutSolidCube(3);
+        glPopMatrix();
+        }
+    //GARIS 2
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glTranslatef(250, 2, 40);
+    glScalef(40, 0.5, 0.75);
+    glutSolidCube(3);
+    glPopMatrix();
+    //GARIS LAIN
+    for ( double x=0; x>=-100; x-=10){
+        glPushMatrix();
+        glColor3f(1, 1, 1);
+        glTranslatef(300+x, 2, 40);
+        glScalef(0.5, 0.5, 15);
+        glutSolidCube(3);
+        glPopMatrix();
+        }
+}
+
+void bangunanluar(){
+    //DASAR
+    glPushMatrix();
+    glColor3f(0.85, 0.85, 0.85);
+    glTranslatef(0,15,200);
+    glScalef(40,40,70);
+    glutSolidCube(1);
+    glPopMatrix();
+    //ATAS
+    glPushMatrix();
+    glColor3f(0.75, 0.75, 0.75);
+    glTranslatef(0, 35, 200);
+    glScalef(10, 1, 20);
+    glutSolidCube(5);
+    glPopMatrix();
+    //ATAP-2
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-20, 40, 250);
+    glVertex3f(-20, 40, 160);
+    glVertex3f(20, 40, 160);
+    glVertex3f(20, 40, 250);
+    glEnd();
+    //PINTU
+    //1
+    glBegin(GL_QUADS);
+    glColor3f(0.45, 0.45, 0.45);
+    glVertex3f(-18, 0, 237);
+    glVertex3f(-18, 10, 237);
+    glVertex3f(-12, 10, 237);
+    glVertex3f(-12, 0, 237);
+    glEnd();
+    //2
+    glBegin(GL_QUADS);
+    glColor3f(0.45, 0.45, 0.45);
+    glVertex3f(-7, 0, 237);
+    glVertex3f(-7, 10, 237);
+    glVertex3f(3, 10, 237);
+    glVertex3f(3, 0, 237);
+    glEnd();
+    //3
+    glBegin(GL_QUADS);
+    glColor3f(0.45, 0.45, 0.45);
+    glVertex3f(8, 0, 237);
+    glVertex3f(8, 10, 237);
+    glVertex3f(14, 10, 237);
+    glVertex3f(14, 0, 237);
+    glEnd();
+    //4
+    glBegin(GL_QUADS);
+    glColor3f(0.45, 0.45, 0.45);
+    glVertex3f(-18, 0, 163);
+    glVertex3f(-18, 10, 163);
+    glVertex3f(-12, 10, 163);
+    glVertex3f(-12, 0, 163);
+    glEnd();
+    //5
+    glBegin(GL_QUADS);
+    glColor3f(0.45, 0.45, 0.45);
+    glVertex3f(-7, 0, 163);
+    glVertex3f(-7, 10, 163);
+    glVertex3f(3, 10, 163);
+    glVertex3f(3, 0, 163);
+    glEnd();
+    //6
+    glBegin(GL_QUADS);
+    glColor3f(0.45, 0.45, 0.45);
+    glVertex3f(8, 0, 163);
+    glVertex3f(8, 10, 163);
+    glVertex3f(14, 10, 163);
+    glVertex3f(14, 0, 163);
+    glEnd();
+
+}
 
 void Display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -3573,6 +3722,9 @@ void Display(void) {
     bangkutribunbesar1();
     papanscore();
     tiangbaru();
+    alas();
+    parkir();
+    bangunanluar();
 
     glutSwapBuffers();
 }
