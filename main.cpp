@@ -2272,7 +2272,7 @@ void bangkutribun1(){
         for (double x=0; x<=96; x+=1.5){
         glColor3f(0.0, 0.5, 1.0);
         glPushMatrix();
-        glTranslatef(-70.35-z,2.5+y,48-x);
+        glTranslatef(-70.4-z,2.5+y,48-x);
         glScalef(0.3,1.5,1);
         glutSolidCube(1);
         glPopMatrix();
@@ -2290,18 +2290,18 @@ void bangkutribun1(){
     for ( double x=0; x>=-32; x-=2){
         glPushMatrix();
         glColor3f(1,0.5,0.5);
-        glTranslatef(-97+x,20.8+y,-5.5);
-        glScalef(1,2,109);
+        glTranslatef(-97+x,20.8+y,-8);
+        glScalef(1,2,114);
         glutSolidCube(1);
         glPopMatrix();
-        y+=0.88;
+        y+=0.9;
         }
 
     //tempatduduk1
     y=-0.88;
     for (int z = 0; z<=32; z+=2 ){
         y+=0.9;
-        for (double x=0; x<=109; x+=1.5){
+        for (double x=0; x<=113.5; x+=1.5){
         glColor3f(0.0, 0.5, 1.0);
         glPushMatrix();
         glTranslatef(-97.35-z,22.3+y,48-x);
@@ -2357,8 +2357,8 @@ void bangkutribun2(){
     for ( double x=0; x>=-32; x-=2){
         glPushMatrix();
         glColor3f(1,0.5,0.5);
-        glTranslatef(97-x,20.8+y,-5.5);
-        glScalef(1,2,109);
+        glTranslatef(97-x,20.8+y,0);
+        glScalef(1,2,97.7);
         glutSolidCube(1);
         glPopMatrix();
         y+=0.88;
@@ -2368,7 +2368,7 @@ void bangkutribun2(){
     y=-0.88;
     for (int z = 0; z<=32; z+=2 ){
         y+=0.9;
-        for (double x=0; x<=109; x+=1.5){
+        for (double x=0; x<=96; x+=1.5){
         glColor3f(0.0, 0.5, 1.0);
         glPushMatrix();
         glTranslatef(97.35+z,22.3+y,48-x);
@@ -2458,8 +2458,8 @@ void bangkutribunbesar2(){
     for (double x=0; x>=-25; x-=2.5){
         glPushMatrix();
         glColor3f(1,0.5,0.5);
-        glTranslatef(-5,23.5+y,-80+x);
-        glScalef(132,2,1);
+        glTranslatef(-5.8,23.5+y,-80+x);
+        glScalef(133,2,1);
         glutSolidCube(1);
         glPopMatrix();
         y+=1.5;
@@ -2468,17 +2468,50 @@ void bangkutribunbesar2(){
     y = -1.5;
     for (z=0; z>=-25; z-=2.5){
         y +=1.5;
-        for (double x=0; x>=-130; x-=2){
+        for (double x=0; x>=-132; x-=2){
         glPushMatrix();
         glColor3f(0.0, 0.5, 1.0);
-        glTranslatef(-70-x,25.1+y,-80.3+z);
+        glTranslatef(-72-x,25.1+y,-80.3+z);
         glScalef(1,1.5,0.3);
         glutSolidCube(1);
         glPopMatrix();
 
         glPushMatrix();
         glColor3f(0.0, 0.5, 1.0);
-        glTranslatef(-70-x,24.8+y,-80+z);
+        glTranslatef(-72-x,24.8+y,-80+z);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
+    }
+
+    //dudukan4
+    y = 0;
+    for (double x=0; x>=-32.5; x-=2.5){
+        glPushMatrix();
+        glColor3f(1,0.5,0.5);
+        glTranslatef(0.3,56.5+y,-105+x);
+        glScalef(120,2,1);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=2.3;
+    }
+
+    //tempatduduk3
+    y = -2.3;
+    for (z=0; z>=-32.5; z-=2.5){
+        y +=2.3;
+        for (double x=0; x>=-118; x-=2){
+        glPushMatrix();
+        glColor3f(0.0, 0.5, 1.0);
+        glTranslatef(-58.8-x,58+y,-105.3+z);
+        glScalef(1,1.5,0.3);
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0.0, 0.5, 1.0);
+        glTranslatef(-58.8-x,57.5+y,-105+z);
         glScalef(1,0.3,1);
         glutSolidCube(1);
         glPopMatrix();
@@ -2487,9 +2520,42 @@ void bangkutribunbesar2(){
 }
 
 void tembokluar(){
+    //PIMTU
+    glBegin(GL_QUADS);
+    glColor3f(0.5, 0.5, 0.5);
+    glVertex3f(-120, 0, 61);
+    glVertex3f(-120, 57, 61);
+    glVertex3f(-73, 57, 106);
+    glVertex3f(-73, 0, 106);
+    glEnd();
+
+    glPushMatrix();
+    glColor3f(0.42, 0.42, 0.42);
+    glRotatef(45, 0, -1, 0);
+    glTranslatef(-5, 20, 133);
+    glScalef(15, 13, 3);
+    glutSolidCube(3);
+    glPopMatrix();
+    //1
+    glBegin(GL_QUADS);
+    glColor3f(0.5, 0.5, 0.5);
+    glVertex3f(-115, 0, 80);
+    glVertex3f(-115, 20, 80);
+    glVertex3f(-105, 20, 90);
+    glVertex3f(-105, 0, 90);
+    glEnd();
+    //2
+    glBegin(GL_QUADS);
+    glColor3f(0.5, 0.5, 0.5);
+    glVertex3f(-98, 0, 98);
+    glVertex3f(-98, 20, 98);
+    glVertex3f(-88, 20, 108);
+    glVertex3f(-88, 0, 108);
+    glEnd();
+
     //TRIBUN 1-Besar 1
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-133, 25, -55);
     glVertex3f(-133, 57, -55);
     glVertex3f(-133, 57, 50);
@@ -2497,7 +2563,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN 1-Kecil 1
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-133, 57, 50);
     glVertex3f(-120, 57, 50);
     glVertex3f(-120, 0, 50);
@@ -2505,7 +2571,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN 1-Kecil 2
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-120, 0, 50);
     glVertex3f(-120, 57, 50);
     glVertex3f(-120, 57, 60);
@@ -2513,7 +2579,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN 1-Besar 2
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-120, 0, 60);
     glVertex3f(-120, 57, 60);
     glVertex3f(-73, 57, 105);
@@ -2521,7 +2587,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN 1-Kecil 3
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-73, 0, 105);
     glVertex3f(-73, 57, 105);
     glVertex3f(-63, 57, 105);
@@ -2529,7 +2595,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN 1-Kecil 4
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-63, 0, 105);
     glVertex3f(-63, 57, 105);
     glVertex3f(-63, 57, 111);
@@ -2537,7 +2603,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN 1-Besar 3 TRIBUN BESAR FULL
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(-63, 25, 111);
     glVertex3f(-63, 57, 111);
     glVertex3f(73, 57, 111);
@@ -2545,7 +2611,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN BESAR 1-Kecil
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(73, 25, 111);
     glVertex3f(73, 57, 111);
     glVertex3f(73, 57, 105);
@@ -2553,7 +2619,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN BESAR 1-Kecil 2
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(73, 25, 105);
     glVertex3f(73, 57, 105);
     glVertex3f(88, 57, 105);
@@ -2561,7 +2627,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN BESAR 1-Kecil 3
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(88, 25, 105);
     glVertex3f(88, 57, 105);
     glVertex3f(98, 57, 103);
@@ -2569,7 +2635,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN BESAR 1-Kecil 4
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(98, 25, 103);
     glVertex3f(98, 57, 103);
     glVertex3f(108, 57, 101);
@@ -2577,7 +2643,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil 5
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(108, 25, 101);
     glVertex3f(108, 57, 101);
     glVertex3f(119, 57, 88);
@@ -2585,7 +2651,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil 6
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(119, 25, 88);
     glVertex3f(119, 57, 88);
     glVertex3f(125, 57, 78);
@@ -2593,7 +2659,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil 7
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(125, 25, 78);
     glVertex3f(125, 57, 78);
     glVertex3f(131, 57, 57);
@@ -2601,7 +2667,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil 8
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(131, 25, 57);
     glVertex3f(131, 57, 57);
     glVertex3f(132, 57, 50);
@@ -2609,7 +2675,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Besar FULL
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(132, 25, 50);
     glVertex3f(132, 57, 50);
     glVertex3f(132, 57, -50);
@@ -2617,7 +2683,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil Lanjutan
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(132, 0, -50);
     glVertex3f(132, 57, -50);
     glVertex3f(119, 57, -50);
@@ -2625,7 +2691,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil L 2
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(119, 0, -50);
     glVertex3f(119, 57, -50);
     glVertex3f(122, 57, -60);
@@ -2633,7 +2699,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil L-3
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(122, 0, -60);
     glVertex3f(122, 57, -60);
     glVertex3f(120, 57, -70);
@@ -2641,7 +2707,7 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil L-4
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(120, 0, -70);
     glVertex3f(120, 57, -70);
     glVertex3f(108, 57, -100);
@@ -2649,12 +2715,127 @@ void tembokluar(){
     glEnd();
     //TRIBUN-BESAR 1-Kecil L-5
     glBegin(GL_QUADS);
-    glColor3f(1, 1, 1);
+    glColor3f(0.9, 0.9, 0.9);
     glVertex3f(108, 0, -100);
     glVertex3f(108, 57, -100);
     glVertex3f(61, 57, -100);
     glVertex3f(61, 0, -100);
     glEnd();
+
+    //TRIBUN-BESAR 2-Kecil X++
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(61, 0, -100);
+    glVertex3f(61, 33, -100);
+    glVertex3f(50, 33, -100);
+    glVertex3f(50, 0, -100);
+    glEnd();
+    //TRIBUN-BESAR 2-Kecil 2
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(50, 0, -100);
+    glVertex3f(50, 33, -100);
+    glVertex3f(50, 33, -115);
+    glVertex3f(50, 0, -115);
+    glEnd();
+    //TRIBUN-BESAR 2-BESAR SEBERANG TIANG
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(50, 0, -115);
+    glVertex3f(50, 33, -115);
+    glVertex3f(-60, 33, -115);
+    glVertex3f(-60, 0, -115);
+    glEnd();
+    //TRIBUN-BESAR 2-Kecil Last
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-60, 0, -115);
+    glVertex3f(-60, 33, -115);
+    glVertex3f(-60, 33, -100);
+    glVertex3f(-60, 0, -100);
+    glEnd();
+    //TRIBUN-BESAR 2-BESAR LANJUTAN
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-60, 0, -110);
+    glVertex3f(-60, 40, -110);
+    glVertex3f(-136, 40, -90);
+    glVertex3f(-136, 0, -90);
+    glEnd();
+    //TRIBUN-BESAR 2-BESAR LAST
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-136, 0, -90);
+    glVertex3f(-136, 40, -90);
+    glVertex3f(-134, 40, -50);
+    glVertex3f(-134, 0, -50);
+    glEnd();
+    //TRIBUN-BESAR 2-Kecil LAST
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-134, 0, -50);
+    glVertex3f(-134, 30, -50);
+    glVertex3f(-124, 30, -50);
+    glVertex3f(-124, 0, -50);
+    glEnd();
+
+    //TEMBOK TRIBUN BESAR 2-Penyangga 1
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(0, 40, -123);
+    glScalef(40, 1.5, 7);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TRIBUN BESAR-2 Penyangga 2 Bawah
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(0, 0, -115);
+    glScalef(40, 1.5, 12);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TEMBOK TRIBUN-BESAR 2-Tiang 1
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(-52, 18, -123);
+    glScalef(4, 13, 5);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TEMBOK TRIBUN-BESAR 2-Tiang 2
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(-27, 18, -123);
+    glScalef(4, 13, 5);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TEMBOK TRIBUN-BESAR 2-Tiang 3
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(-9, 18, -123);
+    glScalef(4, 13, 5);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TEMBOK TRIBUN-BESAR 2-Tiang 4
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(13, 18, -123);
+    glScalef(4, 13, 5);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TEMBOK TRIBUN-BESAR 2-Tiang 5
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(34, 18, -123);
+    glScalef(4, 13, 5);
+    glutSolidCube(3);
+    glPopMatrix();
+    //TEMBOK TRIBUN-BESAR 2-Tiang 6
+    glPushMatrix();
+    glColor3f(0.65, 0.65, 0.65);
+    glTranslatef(56, 18, -123);
+    glScalef(4, 13, 5);
+    glutSolidCube(3);
+    glPopMatrix();
+
 
     //TEMBOK PENYANGGA PANJANG
     glPushMatrix();
@@ -2663,6 +2844,150 @@ void tembokluar(){
     glScalef(0.75, 5, 37);
     glutSolidCube(3);
     glPopMatrix();
+
+    //TEMBOK DEPAN
+    glPushMatrix();
+    glColor3f(0.4, 0.4, 0.4);
+    glTranslatef(-35, 50, 115);
+    glScalef(10, 2, 1);
+    glutSolidCube(5);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0.4, 0.4, 0.4);
+    glTranslatef(55, 50, 115);
+    glScalef(15, 2, 1);
+    glutSolidCube(5);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0.4, 0.4, 0.4);
+    glTranslatef(135, 50, 5);
+    glScalef(1, 2, 20);
+    glutSolidCube(5);
+    glPopMatrix();
+
+    //TEMBOK LUAR-BAWAH 25-T1
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-133, 25, -55);
+    glVertex3f(-120, 25, -55);
+    glVertex3f(-120, 25, 50);
+    glVertex3f(-133, 25, 50);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 2
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-120, 0, -55);
+    glVertex3f(-120, 25, -55);
+    glVertex3f(-120, 25, 50);
+    glVertex3f(-120,0, 50);
+    glEnd();
+    //TEMBOK LUAR-BAWAH SAMBUNG T1-T1 BESAR
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-63, 0, 105);
+    glVertex3f(-63, 25, 105);
+    glVertex3f(-63, 25, 98);
+    glVertex3f(-63, 0, 98);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 BESAR 1
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-63, 25, 111);
+    glVertex3f(-63, 25, 98);
+    glVertex3f(73, 25, 98);
+    glVertex3f(73, 25, 111);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 BESAR 2 Bawah
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-63, 0, 98);
+    glVertex3f(-63, 25, 98);
+    glVertex3f(85, 25, 98);
+    glVertex3f(85, 0, 98);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 CURVE 1
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(73, 25, 105);
+    glVertex3f(73, 25, 98);
+    glVertex3f(85, 25, 98);
+    glVertex3f(85, 25, 105);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 CURVE 2
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(85, 25, 105);
+    glVertex3f(85, 25, 98);
+    glVertex3f(95, 25, 95);
+    glVertex3f(95, 25, 103);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 Curve 2 Bawah
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(85, 0, 98);
+    glVertex3f(85, 25, 98);
+    glVertex3f(95, 25, 95);
+    glVertex3f(95, 0, 95);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 Curve 3
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(95, 25, 103);
+    glVertex3f(95, 25, 95);
+    glVertex3f(105, 25, 92);
+    glVertex3f(105, 25, 101);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 Curve 3 Bawah
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(95, 0, 95);
+    glVertex3f(95, 25, 95);
+    glVertex3f(105, 25, 92);
+    glVertex3f(105, 0, 92);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 Curve 4
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(105, 25, 101);
+    glVertex3f(105, 25, 92);
+    glVertex3f(115, 25, 80);
+    glVertex3f(115, 25, 92);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 Curve 4 Bawah
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(105, 0, 92);
+    glVertex3f(105, 25, 92);
+    glVertex3f(115, 25, 80);
+    glVertex3f(115, 0, 80);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-T1 Curve 5
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(115, 25, 92);
+    glVertex3f(115, 25, 80);
+    glVertex3f(125, 25, 70);
+    glVertex3f(125, 25, 78);
+    glEnd();
+    //TEMBOK LUAR-BAWAH 25-TI RATA
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(115, 25, 92);
+    glVertex3f(131, 25, 65);
+    glVertex3f(132, 25, -50);
+    glVertex3f(115, 25, -50);
+    glEnd();
+    //TEMBOK LUAR-AWAH 25-TI RATA BAWAH
+    glBegin(GL_QUADS);
+    glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(115, 0, 80);
+    glVertex3f(115, 25, 80);
+    glVertex3f(115, 25, -53);
+    glVertex3f(115, 0, -53);
+    glEnd();
+
 }
 
 void bangkutribunbesar1(){
@@ -3691,6 +4016,354 @@ void bangunanluar(){
 
 }
 
+void lapanganlatihan(){
+    //Lapangan Latihan FULL
+    glPushMatrix();
+    glColor3f(34/255.f, 139/255.f, 35/255.f);
+    glTranslatef(-350, 1.5, -100);
+    glScalef(27, 0.5, 19.5);
+    glutSolidCube(5);
+    glPopMatrix();
+    //Lapangan Latihan-Putih
+    //Line Utama
+    glBegin(GL_LINE_LOOP);
+    glColor3f(1, 1, 1);
+    glVertex3f(-402.5, 3, -134);
+    glVertex3f(-297.5, 3, -134);
+    glVertex3f(-297.5, 3, -70);
+    glVertex3f(-402.5, 3, -70);
+    glEnd();
+    //LINE MID
+    glBegin(GL_LINES);
+    glColor3f(1, 1, 1);
+    glVertex3f(-350, 3, -70);
+    glVertex3f(-350, 3, -134);
+    glEnd();
+    //Line Gawang 1
+    glPushMatrix();
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 1, 1);
+    glVertex3f(-402, 3.8, -120.15);
+    glVertex3f(-386, 3.8, -120.15);
+    glVertex3f(-386, 3.8, -79.85);
+    glVertex3f(-402, 3.8, -79.85);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix();
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 1, 1);
+    glVertex3f(-402, 3.8, -109.15);
+    glVertex3f(-397, 3.8, -109.15);
+    glVertex3f(-397, 3.8, -90.5);
+    glVertex3f(-402, 3.8, -90.5);
+    glEnd();
+    glPopMatrix();
+    //Line Gawang 2
+    glPushMatrix();
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 1, 1);
+    glVertex3f(-298, 3.8, -120.15);
+    glVertex3f(-314, 3.8, -120.15);
+    glVertex3f(-314, 3.8, -79.85);
+    glVertex3f(-298, 3.8, -79.85);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix();
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 1, 1);
+    glVertex3f(-298, 3.8, -109.15);
+    glVertex3f(-303, 3.8, -109.15);
+    glVertex3f(-303, 3.8, -90.5);
+    glVertex3f(-298, 3.8, -90.5);
+    glEnd();
+    glPopMatrix();
+    //Lingkaran MAIN+Penalty
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glRotatef(270, 1, 0, 0);
+    glTranslatef(0, 100, 3);
+    lingkaran(-350, 0, 1.5, 1.5, 1000, 120);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glRotatef(270, 1, 0 ,0);
+    glTranslatef(0, 100, 3);
+    lingkaran(-391.5, 0, 1, 1, 1000, 120);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glRotatef(270, 1, 0 ,0);
+    glTranslatef(0, 100, 3);
+    lingkaran(-308.5, 0, 1, 1, 1000, 120);
+    glPopMatrix();
+    //Garis Lingkaran 1-4+Main Putih
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glRotatef(270, 1, 0, 0);
+    glTranslatef(0, 100, 3);
+    lingkaran2(-350, 0, 9.15, 9.15, 1000, 120);
+    glPopMatrix();
+
+
+}
+
+void bangkumiring(){
+    //bangkutribunbesar1tribun2
+    double y = 0;
+    double z = 0;
+    for (double x=0; x>=-14; x-=2){
+        glPushMatrix();
+        glColor3f(1,0.5,0.5);
+        glRotatef(42.1,0,90,-8);
+        glTranslatef(10,26.3+y,103-x);
+        glScalef(54+z,1,1);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=2;
+        z+=5;
+    }
+        y = -2;
+        double w =-2;
+        for (z=0; z>=-14; z-=2){
+        y +=2;
+        w+=2;
+        for (double x=0; x>=-52+z*2.3; x-=1.5){
+            glPushMatrix();
+            glColor3f(0,0.5,1.0);
+            glRotatef(42.1,0,90,-8);
+            glTranslatef(-16-w-x,27.5+y,103.3-z);
+            glScalef(1,1.5,0.3);
+            glutSolidCube(1);
+            glPopMatrix();
+
+            glPushMatrix();
+            glColor3f(0.0, 0.5, 1.0);
+            glRotatef(42.1,0,90,-8);
+            glTranslatef(-16-w-x,27+y,103-z);
+            glScalef(1,0.3,1);
+            glutSolidCube(1);
+            glPopMatrix();
+        }
+        }
+
+    //bangkutribunbesar1tribun2
+    y = 0;
+    z = 0;
+    for (double x=0; x>=-10; x-=2){
+        glPushMatrix();
+        glColor3f(1,0.5,0.5);
+        glRotatef(-43,0,90,-8);
+        glTranslatef(-5,28+y,102-x);
+        glScalef(53+z,1,1);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=2;
+        z+=4;
+    }
+    y = -2;
+    w =-2;
+    for (z=0; z>=-10; z-=2){
+    y +=2;
+    w+=2;
+    for (double x=0; x>=-52+z*1.9; x-=1.5){
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(-43,0,90,-8);
+        glTranslatef(-30.5-w-x,29.2+y,102.3-z);
+        glScalef(1,1.5,0.3);
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0.0, 0.5, 1.0);
+        glRotatef(-43,0,90,-8);
+        glTranslatef(-30.5-w-x,28.6+y,102-z);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
+    }
+    //bangkutribunbesar2tribun2
+    y = 0;
+    z = 0;
+    for (double x=0; x>=-12.5; x-=3){
+        glPushMatrix();
+        glColor3f(1,0.5,0.5);
+        glRotatef(139,-1,75,5);
+        glTranslatef(-18,10.5+y,104-x);
+        glScalef(45+z,1,1);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=2;
+        z+=6;
+        }
+    y = -2;
+    w =-3;
+    for (z=0; z>=-12; z-=3){
+    y +=2;
+    w+=3;
+    for (double x=0; x>=-42+z*2.1; x-=1.5){
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(139,-1,75,5);
+        glTranslatef(-39-w-x,11.7+y,104.4-z);
+        glScalef(1,1.5,0.3);
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(139,-1,75,5);
+        glTranslatef(-39-w-x,11.1+y,104-z);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
+    }
+
+    //tribunbesar2tribun1
+    y=0;
+    for ( double x=0; x>=-24; x-=1.6){
+        glPushMatrix();
+        glColor3f(1,0.5,0.5);
+        glRotatef(275,0,80,6);
+        glTranslatef(-88+x,14+y,80);
+        glScalef(1,2,24);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=0.8;
+        }
+    y = -0.8;
+    w =-3;
+    for (z=0; z>=-23; z-=1.6){
+    y +=0.8;
+    w+=3;
+    for ( double x=0; x>=-22.5; x-=1.5){
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(275,0,80,6);
+        glTranslatef(-88.3+z,15.5+y,91.3+x);
+        glScalef(0.3,1.5,1);;
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(275,0,80,6);
+        glTranslatef(-88+z,15.2+y,91.3+x);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
+    }
+    y=0;
+    for ( double x=0; x>=-10; x-=1.6){
+        glPushMatrix();
+        glColor3f(1,0.5,0.5);
+        glRotatef(287,0,80,5);
+        glTranslatef(-115+x,25+y,87.5);
+        glScalef(1,2,34);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=0.5;
+        }
+    y = -0.5;
+    w =-3;
+    for (z=0; z>=-10; z-=1.6){
+    y +=0.5;
+    w+=3;
+    for ( double x=0; x>=-32.5; x-=1.5){
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(287,0,80,5);
+        glTranslatef(-115.3+z,26.5+y,103+x);
+        glScalef(0.3,1.5,1);;
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(287,0,80,5);
+        glTranslatef(-115+z,26.2+y,103+x);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
+    }
+
+    y=0;
+    for ( double x=0; x>=-32; x-=2){
+        glPushMatrix();
+        glRotatef(360,0,0,-5);
+        glColor3f(1,0.5,0.5);
+        glTranslatef(-97+x,24+y,-71);
+        glScalef(1,2,10);
+        glutSolidCube(1);
+        glPopMatrix();
+        y+=0.8;
+        }
+    y = -0.8;
+    for (z=0; z>=-32; z-=2){
+    y +=0.8;
+    for ( double x=0; x>=-9; x-=1.5){
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(360,0,0,-5);
+        glTranslatef(-97.3+z,25.5+y,-66.3+x);
+        glScalef(0.3,1.5,1);;
+        glutSolidCube(1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glColor3f(0,0.5,1.0);
+        glRotatef(360,0,0,-5);
+        glTranslatef(-97+z,25.2+y,-66.3+x);
+        glScalef(1,0.3,1);
+        glutSolidCube(1);
+        glPopMatrix();
+    }
+    }
+}
+
+void jalan(){
+    //Jalan Utama
+    glPushMatrix();
+    glColor3f(0.88, 0.88, 0.88);
+    glTranslatef(-200, 2, 0);
+    glScalef(8, 0.5, 250);
+    glutSolidCube(5);
+    glPopMatrix();
+    //Garis
+    for ( double z=0; z>=-1250; z-=50){
+        glPushMatrix();
+        glColor3f(0, 0, 0);
+        glTranslatef(-200, 3, 650+z);
+        glScalef(0.75, 0.5, 10);
+        glutSolidCube(3);
+        glPopMatrix();
+        }
+    //Jalan Utama 2
+    glPushMatrix();
+    glColor3f(0.88, 0.88, 0.88);
+    glTranslatef(50, 2, 280);
+    glScalef(250, 0.5, 8);
+    glutSolidCube(5);
+    glPopMatrix();
+    for ( double x=0; x>=-1250; x-=50){
+        glPushMatrix();
+        glColor3f(0, 0, 0);
+        glTranslatef(650+x, 3, 280);
+        glScalef(10, 0.5, 0.75);
+        glutSolidCube(3);
+        glPopMatrix();
+        }
+
+}
+
 void Display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
@@ -3725,6 +4398,9 @@ void Display(void) {
     alas();
     parkir();
     bangunanluar();
+    lapanganlatihan();
+    bangkumiring();
+    jalan();
 
     glutSwapBuffers();
 }
