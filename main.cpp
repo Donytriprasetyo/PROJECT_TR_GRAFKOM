@@ -20,8 +20,10 @@ int is_depth;
 void init(void){
     glClearColor(0, 1, 254/255.f, 0);
     glMatrixMode(GL_PROJECTION);
-    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
     glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_DEPTH_TEST);
     is_depth=1;
     glLineWidth(4);
     glMatrixMode(GL_MODELVIEW);
