@@ -4366,6 +4366,51 @@ void jalan(){
 
 }
 
+void var(){
+
+    glPushMatrix();
+    glColor3f(0,0,0);
+    glTranslatef(0,2,37);
+    glScalef(1,3,0.5);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0,0,0);
+    glTranslatef(0,4,37);
+    glScalef(3,3,0.5);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1,1,1);
+    glTranslatef(0,4.1,36.7);
+    glScalef(2,2,0.1);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0,0,0);
+    glTranslatef(0,5.5,36.8);
+    glScalef(3,0.5,1);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0,0,0);
+    glTranslatef(1.5,4.8,36.8);
+    glScalef(0.5,2,1);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0,0,0);
+    glTranslatef(-1.5,4.8,36.8);
+    glScalef(0.5,2,1);
+    glutSolidCube(1);
+    glPopMatrix();
+}
+
 void Display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
@@ -4403,6 +4448,7 @@ void Display(void) {
     lapanganlatihan();
     bangkumiring();
     jalan();
+    var();
 
     glutSwapBuffers();
 }
